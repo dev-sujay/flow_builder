@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .flow-builder {
+    display: flex;
+    flex-grow: 1;
+  }
+  
+  .nodes-panel {
+    flex: 0 0 20%;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+  }
+  
+  .react-flow-wrapper {
+    flex: 1;
+    height: 100%;
+  }
+  
+  .settings-panel {
+    flex: 0 0 20%;
+    background-color: #fafafa;
+    padding: 10px;
+    border-left: 1px solid #ddd;
+  }
+  
+  .draggable-node {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: grab;
+  }
+  
