@@ -21,7 +21,7 @@ const NodesPanel = () => {
 
   const onDragStart = (e, node) => {
     // we'll send the type of the node to the drop event
-    // so we can create a new node with the type of the dropped element
+    // so we can create a new node with the type of the dropped element ---> onDrop
     e.dataTransfer.setData('application/reactflow', node.type);
     e.dataTransfer.effectAllowed = 'move';
   };

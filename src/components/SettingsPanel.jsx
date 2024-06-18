@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import { BiArrowBack } from "react-icons/bi"; 
+import { AppContext } from "../context/ContextProvider";
 
-const SettingsPanel = ({ selectedNode, setNodes, setSelectedNode, nodes }) => {
+const SettingsPanel = () => {
+
+  const {selectedNode, setNodes, setSelectedNode, nodes} = useContext(AppContext)
 
   const onChange = (e) => {
     setNodes((nds) =>
@@ -18,20 +22,6 @@ const SettingsPanel = ({ selectedNode, setNodes, setSelectedNode, nodes }) => {
       })
     );
   };
-
-
-  // const onSave = () => {
-  //   setNodes((nds) =>
-  //     nds.map((node) => {
-  //       if (node.id === selectedNode.id) {
-  //         return selectedNode;
-  //       }
-  //       return node;
-  //     })
-  //   );
-  //   setSelectedNode(null);
-  // };
-
 
   return (
     <div className="w-1/5 p-4 bg-white  me-3 border-l ">

@@ -1,21 +1,24 @@
-import { FaCaretRight } from 'react-icons/fa';
-import {BezierEdge, EdgeLabelRenderer} from 'reactflow';
+import { BiRightArrow } from "react-icons/bi";
+import { BezierEdge, EdgeLabelRenderer } from "reactflow"
 
-export default function CustomEdge(props) {
-  return (
-    <>
-      <BezierEdge {...props} />
-
-      {/* render icon at the target */}
-      <EdgeLabelRenderer>
-        <FaCaretRight
-          size={20}
-          className="text-black"
-          style={{
-            transform: `translate(-50%, -50%) translate(${targetX}px, ${targetY}px)`,
-          }}
-        />
-      </EdgeLabelRenderer>
-    </>
-  );
+const CustomEdge = (props) => {
+    const { targetX, targetY } = props
+    return (
+        <>
+            <BezierEdge {...props} />
+            <EdgeLabelRenderer>
+                <BiRightArrow
+                    size={20}
+                    className="text-black"
+                    style={{
+                        transform: `translate(${targetX - 10}px, ${targetY - 10}px)`,
+                        cursor: "pointer",
+                        position: "absolute",
+                    }}
+                />
+            </EdgeLabelRenderer>
+        </>
+    )
 }
+
+export default CustomEdge

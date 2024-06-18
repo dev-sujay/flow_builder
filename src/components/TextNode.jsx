@@ -1,6 +1,6 @@
 import { AiOutlineMessage } from 'react-icons/ai'
 import { IoLogoWhatsapp } from 'react-icons/io'
-import { Handle } from 'reactflow'
+import { Handle, Position } from 'reactflow'
 
 const TextNode = ({ data }) => {
     return (
@@ -14,16 +14,16 @@ const TextNode = ({ data }) => {
             <div type="text" className="w-full p-2">
                 {data.value}
             </div>
-            <Handle type="target" position="left" style={{
+            <Handle type="target" position={Position.Left} style={{
                 width: 10,
                 height: 10,
-                background: 'white',
+                background: 'black',
                 border: '1px solid #000',
             }} />
-            <Handle type="source" position="right" style={{
+            <Handle type="source" position={Position.Right} style={{
                 width: 10,
                 height: 10,
-                background: 'white',
+                background: 'black',
                 border: '1px solid #000',
             }} />
         </div>
